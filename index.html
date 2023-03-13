@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rental of AI Bots to increase ETH</title>
+    <title>Miner IA</title>
     <style>
-      #title {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, 0);
-        font-size: 3em;
-        animation: fall 1s linear infinite;
+      body {
+        background-color: black;
+        overflow: hidden;
       }
       
-      @keyframes fall {
-        0% { top: 0; }
-        100% { top: 100%; }
+      #matrix-code {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: green;
+        font-size: 12px;
+        font-family: monospace;
+        pointer-events: none;
       }
     </style>
     <script>
-      // seleccionamos el elemento del título
-      const title = document.getElementById("title");
+      // creamos una función que genera el código aleatorio
+      function generateCode() {
+        const code = [];
+        for (let i = 0; i < 500; i++) {
+          code.push(Math.floor(Math.random() * 2));
+        }
+        return code.join("");
+      }
       
-      // creamos una función que se llama cada 1 segundo
-      setInterval(() => {
-        // obtenemos la posición actual del título
-        const currentPosition = parseInt(getComputedStyle(title).top);
-        
-        // sumamos 10 a la posición para moverlo hacia abajo
-        title.style.top = currentPosition + 10 + "px";
-      }, 1000);
+      // seleccionamos el elemento que contiene el código
+      const matrixCode = document.getElementById("matrix-code");
+      
+      // creamos una función que actualiza el código y la posición
+      function updateCode() {
+        let code = "";
+        for (let i = 0; i < 100; i++) {
+          code += generateCode() + "<br>";
+        }
+        matrixCode.innerHTML = code;
+        matrixCode.style.top = "-100%";
+      }
+      
+      // actualizamos el código cada 50 milisegundos
+      setInterval(updateCode, 50);
+      
+      // creamos una función que mueve el código hacia abajo
+      function moveCode() {
+        const currentPosition = parseInt(getComputedStyle(matrixCode).top);
+        matrixCode.style.top = currentPosition + 1 + "px";
+        requestAnimationFrame(moveCode);
+      }
+      
+      // llamamos a la función para iniciar la animación
+      moveCode();
     </script>
   </head>
   <body>
-    <h1 id="title">Rental of AI Bots to increase ETH</h1>
+    <div id="matrix-code"></div>
   </body>
 </html>
 
