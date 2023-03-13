@@ -3,34 +3,39 @@
   <head>
     <title>Rental of AI Bots to increase ETH</title>
     <style>
-      body {
-        background-image: url('https://example.com/background.gif');
-        background-size: cover;
+      #title {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 3em;
+        animation: fall 1s linear infinite;
       }
       
-      h1 {
-        display: inline-block;
-        animation: pulse 2s infinite;
-      }
-      
-      #robot {
-        display: inline-block;
-        font-size: 2em;
-        margin-left: 10px;
-      }
-      
-      @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.2); }
-        100% { transform: scale(1); }
+      @keyframes fall {
+        0% { top: 0; }
+        100% { top: 100%; }
       }
     </style>
+    <script>
+      // seleccionamos el elemento del título
+      const title = document.getElementById("title");
+      
+      // creamos una función que se llama cada 1 segundo
+      setInterval(() => {
+        // obtenemos la posición actual del título
+        const currentPosition = parseInt(getComputedStyle(title).top);
+        
+        // sumamos 10 a la posición para moverlo hacia abajo
+        title.style.top = currentPosition + 10 + "px";
+      }, 1000);
+    </script>
   </head>
   <body>
-    <h1>Rental of AI Bots to increase ETH</h1>
-    <span id="robot">&#128305;</span>
+    <h1 id="title">Rental of AI Bots to increase ETH</h1>
   </body>
 </html>
+
 
 
 
