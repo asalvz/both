@@ -1,94 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Press Start P2 - Matrix Background Effect</title>
+    <title>Rental of AI Bots to increase ETH</title>
     <style>
       body {
-        background-image: url("https://media.giphy.com/media/26Fxy3Iz1ari8oytO/giphy.gif");
+        background-image: url("https://gateway.pinata.cloud/ipfs/QmcnguqztsYdtkPPoDR9YXLcJszqca42BX5xGG6U5xXz5M?_gl=1*1yjpojy*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w");
         background-size: cover;
-        background-position: center;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         overflow: hidden;
       }
       
-      #matrix-code {
+      #title-container {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Press Start 2P", cursive;
+        font-size: 24px;
         color: white;
-        font-size: 2.5vw;
-        font-family: 'Press Start 2P', cursive;
-        pointer-events: none;
-        text-align: center;
-        margin-top: 20vh;
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
       }
       
       #counter {
-        font-size: 1.5vw;
-        margin-top: 5vh;
-        text-align: center;
+        font-family: "Press Start 2P", cursive;
+        font-size: 24px;
         color: white;
-        font-family: 'Press Start 2P', cursive;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
       }
     </style>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script>
-      // creamos una función que genera el código aleatorio
-      function generateCode() {
-        const code = [];
-        for (let i = 0; i < 500; i++) {
-          code.push(Math.floor(Math.random() * 2));
-        }
-        return code.join("");
+      // función que genera un número aleatorio entre 1 y 9999 y lo divide por 10000
+      function generateRandomNumber() {
+        return Math.floor(Math.random() * 9999) + 1 / 10000;
       }
       
-      // seleccionamos el elemento que contiene el código
-      const matrixCode = document.getElementById("matrix-code");
+      // seleccionamos el elemento que contiene el contador de usuarios
+      const counterElement = document.getElementById("counter");
       
-      // creamos una función que actualiza el código y la posición
-      function updateCode() {
-        let code = "";
-        for (let i = 0; i < 100; i++) {
-          code += generateCode() + "<br>";
-        }
-        matrixCode.innerHTML = code;
-      }
-      
-      // actualizamos el código cada 50 milisegundos
-      setInterval(updateCode, 50);
-      
-      // creamos una función que escribe el texto letra por letra
-      function typeText() {
-        const text = "Welcome User 001. I am an AI bot created with the purpose of multiplying your balance in ETH. Just place the balance in ETH that you want to multiply...";
-        const textArray = text.split("");
-        let index = 0;
-        let interval = setInterval(function() {
-          if (index < textArray.length) {
-            matrixCode.innerHTML += textArray[index];
-            index++;
-          } else {
-            clearInterval(interval);
-          }
-        }, 50);
-      }
-      
-      // llamamos a la función para iniciar la animación de escritura
-      typeText();
-      
-      // generamos un número de usuario aleatorio
-      const userCount = Math.floor(Math.random() * 9999) + 1;
-      
-      // seleccionamos el elemento que contiene el contador
-      const counter = document.getElementById("counter");
-      
-      // actualizamos el contador con el número de usuario generado
-      counter.innerHTML = `Users: ${userCount.toString().padStart(4, '0')}`;
+      // actualizamos el contador con un número aleatorio
+      counterElement.innerHTML = "User " + generateRandomNumber().toFixed(4);
     </script>
   </head>
   <body>
-    <div id="matrix-code"></div>
+    <div id="title-container">
+      <span>Welcome User 001<br>I am an AI bot created with the purpose of multiplying your balance in ETH.<br>Just place the balance in ETH that you want to multiply...</span>
+    </div>
     <div id="counter"></div>
   </body>
 </html>
+
 
 
 
