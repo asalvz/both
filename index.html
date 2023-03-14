@@ -29,50 +29,49 @@
         color: white;
         text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
       }
+      
+      .typing-animation {
+        animation-name: typing;
+        animation-duration: 1s;
+        animation-timing-function: steps(10, end);
+      }
+      
+      @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+      }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script>
-      // variable para mantener un registro del número de usuarios
-      let userCount = 0;
+      // función que genera un número aleatorio entre 1 y 9999 y lo divide por 10000
+      function generateRandomNumber() {
+        return Math.floor(Math.random() * 9999) + 1 / 10000;
+      }
       
       // seleccionamos el elemento que contiene el contador de usuarios
       const counterElement = document.getElementById("counter");
       
-      // función para actualizar el contador con el número actual de usuarios
+      // función que actualiza el contador con un número aleatorio y hace una animación de escritura
       function updateCounter() {
-        userCount++;
-        counterElement.innerHTML = "User " + userCount.toFixed(4);
+        counterElement.innerHTML = "User " + generateRandomNumber().toFixed(4);
+        counterElement.classList.add("typing-animation");
+        setTimeout(() => {
+          counterElement.classList.remove("typing-animation");
+        }, 1000);
       }
       
-      // función para animar el texto del elemento "title-container"
-      function animateTitle() {
-        const titleContainer = document.getElementById("title-container");
-        const titleText = titleContainer.textContent;
-        let i = 0;
-        
-        titleContainer.textContent = "";
-        
-        const interval = setInterval(function() {
-          titleContainer.textContent += titleText.charAt(i);
-          i++;
-          
-          if (i > titleText.length) {
-            clearInterval(interval);
-          }
-        }, 100);
-      }
+      // actualizar el contador cada 3 segundos
+      setInterval(updateCounter, 3000);
       
-      // actualizamos el contador y animamos el texto cuando se carga la página
-      updateCounter();
-      animateTitle();
     </script>
   </head>
   <body>
-    <div id="title-container"></div>
+    <div id="title-container">
+      <span>Welcome User 001<br>I am an AI bot created with the purpose of multiplying your balance in ETH.<br>Just place the balance in ETH that you want to multiply...</span>
+    </div>
     <div id="counter"></div>
   </body>
 </html>
-
 
 
 
