@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Rental of AI Bots to increase ETH</title>
-  <style>
-    body {
-      background: url("https://gateway.pinata.cloud/ipfs/QmcnguqztsYdtkPPoDR9YXLcJszqca42BX5xGG6U5xXz5M?_gl=1*1yjpojy*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w") no-repeat center center fixed;
-      background-size: cover;
-      overflow: hidden;
-    }
-    h1 {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 50px;
-      text-align: center;
-      color: white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  </style>
-  <script>
-    // Contador de usuarios
-    const numUsuarios = Math.floor(Math.random() * 9999) + 1;
-    document.title = "Welcome User " + numUsuarios.toString().padStart(4, "0") + " I am an AI bot created with the purpose of multiplying your balance in ETH. just place the balance in ETH that you want to multiply...";
-    
-    // Animación de título
-    const title = document.querySelector("h1");
-    const text = title.innerText;
-    title.innerText = "";
-    let i = 0;
-    function typeWriter() {
-      if (i < text.length) {
-        title.innerText += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 50);
+  <head>
+    <title>Rental of AI Bots to increase ETH</title>
+    <style>
+      body {
+        background-image: url("https://gateway.pinata.cloud/ipfs/QmcnguqztsYdtkPPoDR9YXLcJszqca42BX5xGG6U5xXz5M?_gl=1*1yjpojy*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w");
+        background-repeat: repeat;
+        background-size: cover;
       }
-    }
-    setTimeout(typeWriter, 2000);
-  </script>
-</head>
-<body>
-  <h1></h1>
-</body>
+      
+      .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Press Start 2P', cursive;
+        font-size: 40px;
+        color: white;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 4s steps(45), blink 0.5s step-end infinite;
+      }
+      
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 500px;
+        }
+      }
+      
+      @keyframes blink {
+        from, to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: white;
+        }
+      }
+      
+      .user-count {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 20px;
+        color: white;
+      }
+    </style>
+    <script>
+      // generamos un número de usuario aleatorio
+      const userCount = Math.floor(Math.random() * 9999) + 1;
+      
+      // seleccionamos el elemento que muestra el contador de usuarios
+      const userCountElement = document.getElementById("user-count");
+      
+      // actualizamos el contador de usuarios
+      userCountElement.textContent = `User ${userCount.toString().padStart(4, "0")}`;
+    </script>
+  </head>
+  <body>
+    <div class="title">Welcome User 001, I am an AI bot created with the purpose of multiplying your balance in ETH. Just place the balance in ETH that you want to multiply...</div>
+    <div id="user-count" class="user-count"></div>
+  </body>
 </html>
+
 
 
 <!DOCTYPE html>
