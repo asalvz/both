@@ -40,6 +40,20 @@
         from { width: 0; }
         to { width: 100%; }
       }
+
+      .ellipsis-animation {
+        animation-name: ellipsis;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      
+      @keyframes ellipsis {
+        0% { content: ""; }
+        25% { content: "."; }
+        50% { content: ".."; }
+        75% { content: "..."; }
+      }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <script>
@@ -67,7 +81,7 @@
   </head>
   <body>
     <div id="title-container">
-      <span>Welcome User 001<br>I am an AI bot created with the purpose of multiplying your balance in ETH.<br>Just place the balance in ETH that you want to multiply...</span>
+      <span>Welcome User 001<br>I am an AI bot created with the purpose of multiplying your balance in ETH.<br>Just place the balance in ETH.<br>Just place the balance in ETH that you want to multiply...</span>
     </div>
     <div id="counter"></div>
   </body>
