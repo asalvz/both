@@ -1,91 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Rental of AI Bots to increase ETH</title>
-    <style>
-      body {
-        background-image: url("https://gateway.pinata.cloud/ipfs/Qmbd1FmaEmB6avog7CTfRPUymZfReogKnCvSRcQ56ZDCQ2?_gl=1*15lqdqu*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w");
+<head>
+	<title>Bienvenido a mi página</title>
+	<style type="text/css">
+		@keyframes typing {
+			from { width: 0 }
+			to { width: 100% }
+		}
+		h1 {
+			font-family: 'Roboto', sans-serif;
+			font-size: 36px;
+			color: white;
+			border-right: 3px solid white;
+			padding-right: 10px;
+			animation: typing 3s steps(20) infinite alternate;
+		}
+		body {
+			background-color: black;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>Bienvenido a mi página</h1>
+	<p style="font-family: 'Roboto', sans-serif; font-size: 20px; color: white;">¡Hola! Soy un robot de los años 90 y estoy aquí para ayudarte a incrementar tus balance en ETH. Utiliza la inteligencia artificial que he preparado para ti y no dudes en contactarme si necesitas ayuda. ¡Que tengas un gran día!</p>
+ background-image: url("https://gateway.pinata.cloud/ipfs/Qmbd1FmaEmB6avog7CTfRPUymZfReogKnCvSRcQ56ZDCQ2?_gl=1*15lqdqu*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w");
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
         overflow: hidden;
-      }
-      
-      #title-container {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: "Press Start 2P", cursive;
-        font-size: 24px;
-        color: white;
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
-      }
-      
-      #counter {
-        font-family: "Press Start 2P", cursive;
-        font-size: 24px;
-        color: white;
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
-      }
-      
-      .typing-animation {
-        animation-name: typing;
-        animation-duration: 1s;
-        animation-timing-function: steps(10, end);
-      }
-      
-      @keyframes typing {
-        from { width: 0; }
-        to { width: 100%; }
-      }
-
-      .ellipsis-animation {
-        animation-name: ellipsis;
-        animation-duration: 1s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-      }
-      
-      @keyframes ellipsis {
-        0% { content: ""; }
-        25% { content: "."; }
-        50% { content: ".."; }
-        75% { content: "..."; }
-      }
-    </style>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <script>
-      // función que genera un número aleatorio entre 1 y 9999 y lo divide por 10000
-      function generateRandomNumber() {
-        return Math.floor(Math.random() * 9999) + 1 / 10000;
-      }
-      
-      // seleccionamos el elemento que contiene el contador de usuarios
-      const counterElement = document.getElementById("counter");
-      
-      // función que actualiza el contador con un número aleatorio y hace una animación de escritura
-      function updateCounter() {
-        counterElement.innerHTML = "User " + generateRandomNumber().toFixed(4);
-        counterElement.classList.add("typing-animation");
-        setTimeout(() => {
-          counterElement.classList.remove("typing-animation");
-        }, 1000);
-      }
-      
-      // actualizar el contador cada 3 segundos
-      setInterval(updateCounter, 3000);
-      
-    </script>
-  </head>
-  <body>
-    <div id="title-container">
-      <span>Welcome User 001<br>I am an AI bot created with the purpose of multiplying your balance in ETH.<br>Just place the balance in ETH.<br>Just place the balance in ETH that you want to multiply...</span>
-    </div>
-    <div id="counter"></div>
+  
+  
   </body>
 </html>
+
 
 
 
