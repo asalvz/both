@@ -1,61 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Welcome User 001 I am an AI bot created with the purpose of multiplying your balance in ETH. just place the balance in ETH that you want to multiply...</title>
-    <style>
-      /* Estilos para el efecto de título animado */
-      .typewriter {
-        overflow: hidden; /* Para que el texto no se desborde */
-        border-right: 0.08em solid green; /* Línea vertical intermitente */
-        white-space: nowrap; /* Para que el texto no se parta en varias líneas */
-        margin: 0 auto; /* Centra el texto horizontalmente */
-        letter-spacing: 0.1em; /* Espaciado entre letras */
-        animation: typing 3s steps(30) 1s 1 normal both;
+<head>
+  <title>Rental of AI Bots to increase ETH</title>
+  <style>
+    body {
+      background: url("https://gateway.pinata.cloud/ipfs/QmcnguqztsYdtkPPoDR9YXLcJszqca42BX5xGG6U5xXz5M?_gl=1*1yjpojy*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w") no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+    }
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 50px;
+      text-align: center;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <script>
+    // Contador de usuarios
+    const numUsuarios = Math.floor(Math.random() * 9999) + 1;
+    document.title = "Welcome User " + numUsuarios.toString().padStart(4, "0") + " I am an AI bot created with the purpose of multiplying your balance in ETH. just place the balance in ETH that you want to multiply...";
+    
+    // Animación de título
+    const title = document.querySelector("h1");
+    const text = title.innerText;
+    title.innerText = "";
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        title.innerText += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
       }
-      
-      @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-      }
-      
-      /* Estilos para el contador de usuarios */
-      #user-counter {
-        position: fixed; /* Posición fija para que se mantenga en la pantalla */
-        top: 10px;
-        right: 10px;
-        background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 20px;
-        font-family: monospace;
-      }
-      
-      /* Estilos para el fondo de la página */
-      body {
-        background-image: url('https://gateway.pinata.cloud/ipfs/QmcnguqztsYdtkPPoDR9YXLcJszqca42BX5xGG6U5xXz5M?_gl=1*1yjpojy*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w'); /* Ruta a tu gif */
-        background-size: cover;
-      }
-    </style>
-    <script>
-      // Obtiene el número de usuarios del localStorage o lo inicializa en 0
-      let numUsuarios = parseInt(localStorage.getItem('numUsuarios')) || 0;
-      
-      // Incrementa el número de usuarios y lo guarda en localStorage
-      numUsuarios++;
-      localStorage.setItem('numUsuarios', numUsuarios);
-      
-      // Actualiza el título con el número de usuarios
-      let title = `User ${numUsuarios.toString().padStart(4, '0')} - Welcome User 001 I am an AI bot created with the purpose of multiplying your balance in ETH. just place the balance in ETH that you want to multiply...`;
-      document.title = title;
-      
-      // Muestra el número de usuarios en el contador
-      document.getElementById('user-counter').innerText = `User ${numUsuarios.toString().padStart(4, '0')}`;
-    </script>
-  </head>
-  <body>
-    <div class="typewriter">Welcome User 001 I am an AI bot created with the purpose of multiplying your balance in ETH. just place the balance in ETH that you want to multiply...</div>
-  </body>
+    }
+    setTimeout(typeWriter, 2000);
+  </script>
+</head>
+<body>
+  <h1></h1>
+</body>
 </html>
 
 
