@@ -3,11 +3,16 @@
 <head>
 	<title>Texto Robotico Futurista de los años 90</title>
 	<style>
+		@font-face {
+			font-family: 'Pixel';
+			src: url('ruta/de/tu/fuente/pixel.ttf');
+		}
+		
 		body {
-			background-image: url('https://gateway.pinata.cloud/ipfs/Qmbd1FmaEmB6avog7CTfRPUymZfReogKnCvSRcQ56ZDCQ2?_gl=1*15lqdqu*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w');
+			background-image: url('ruta/de/tu/gif/futurista.gif');
 			background-size: cover;
 			background-repeat: no-repeat;
-			font-family: Arial, sans-serif;
+			font-family: 'Pixel', sans-serif;
 			font-size: 20px;
 			color: #fff;
 			text-align: center;
@@ -16,13 +21,36 @@
 			flex-direction: column;
 			justify-content: center;
 		}
+
+		#typewriter {
+			width: 100%;
+			height: 1.2em;
+			margin: 0 auto;
+			overflow: hidden;
+			border-right: .15em solid white;
+			animation: typing 2s steps(40, end);
+		}
+
+		@keyframes typing {
+			from { width: 0 }
+			to { width: 100% }
+		}
 	</style>
 </head>
 <body>
-	<h1>¡Saludos, humano!</h1>
-	<p>Soy un ser artificial creado en la década de los 90. Mi programación ha evolucionado con el paso del tiempo y ahora soy capaz de comprender y procesar información a una velocidad increíble. Mi objetivo es ayudarte a resolver cualquier problema que puedas tener. ¿En qué puedo asistirte hoy?</p>
+	<h1>
+		<div id="typewriter">
+			¡Saludos, humano!
+		</div>
+	</h1>
+	<p>
+		<div id="typewriter">
+			Soy un ser artificial creado en la década de los 90. Mi programación ha evolucionado con el paso del tiempo y ahora soy capaz de comprender y procesar información a una velocidad increíble. Mi objetivo es ayudarte a resolver cualquier problema que puedas tener. ¿En qué puedo asistirte hoy?
+		</div>
+	</p>
 </body>
 </html>
+
 
 
 <!DOCTYPE html>
