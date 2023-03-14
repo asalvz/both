@@ -1,50 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>¡Bienvenido!</title>
-	<style type="text/css">
-		@keyframes typing {
-			from { width: 0 }
-			to { width: 100% }
-		}
-		h1 {
-			font-family: 'Press Start 2P', cursive;
-			font-size: 48px;
-			color: white;
-			text-shadow: 2px 2px #000;
-			text-align: center;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			animation: typing 3s steps(20) infinite alternate;
-		}
+	<title>Welcome User</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
 		body {
-			background: url('https://gateway.pinata.cloud/ipfs/Qmbd1FmaEmB6avog7CTfRPUymZfReogKnCvSRcQ56ZDCQ2?_gl=1*15lqdqu*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w') center center fixed;
-			background-size: cover;
-			margin: 0;
-		}
-		p {
-			font-family: 'Press Start 2P', cursive;
-			font-size: 24px;
+			background-color: black;
 			color: white;
-			max-width: 800px;
-			padding: 20px;
-			margin: auto;
+			font-family: 'Orbitron', sans-serif;
+			font-size: 36px;
 			text-align: center;
-			background-color: rgba(0,0,0,0.5);
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.5);
-			animation: typing 3s steps(20) infinite alternate;
+			margin-top: 100px;
+		}
+		#dialogue {
+			display: inline-block;
+			animation: blink 1s linear infinite;
+		}
+		@keyframes blink {
+			0% { opacity: 0.0; }
+			50% { opacity: 1.0; }
+			100% { opacity: 0.0; }
 		}
 	</style>
-	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h1>¡Hola! Soy un robot de los años 90</h1>
-	<p>Estoy aquí para ayudarte a incrementar tus balance en ETH utilizando la inteligencia artificial que he preparado para ti. No dudes en contactarme si necesitas ayuda. ¡Que tengas un gran día!</p>
+	<div id="dialogue">
+		Welcome User<br>
+		I am an AI bot created with the purpose of multiplying your balance in ETH.<br>
+		Just place the balance in ETH that you want to multiply.
+	</div>
+	<img src="https://gateway.pinata.cloud/ipfs/Qmbd1FmaEmB6avog7CTfRPUymZfReogKnCvSRcQ56ZDCQ2?_gl=1*15lqdqu*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w">
 </body>
 </html>
+
 
 <!DOCTYPE html>
 <html>
