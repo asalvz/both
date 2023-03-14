@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Texto vintage de los años 80</title>
-    <style>
-      body {
-        background-image: url("https://gateway.pinata.cloud/ipfs/Qmbd1FmaEmB6avog7CTfRPUymZfReogKnCvSRcQ56ZDCQ2?_gl=1*15lqdqu*_ga*NjM3MzI2ODguMTY2NzY2MTc5Mw..*_ga_5RMPXG14TE*MTY3ODc1MjE4MS4zMi4xLjE2Nzg3NTIyMjUuMTYuMC4w");
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      
-   h1 {
-  font-family: "OCR A", sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-shadow: 1px 1px 0 #000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: typing 5s steps(1) forwards;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 20ch;
-  }
-}
-
-    </style>
-  </head>
-  <body>
-    <h1>¡Bienvenido! Soy un bot de IA que puede ayudarte a multiplicar tu balance en ETH.</h1>
-  </body>
+<head>
+	<title>Portal Futurista</title>
+	<style>
+		body {
+			background-image: url("fondo.gif");
+			background-size: cover;
+		}
+		
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		
+		.tabs {
+			display: flex;
+			justify-content: space-between;
+			width: 50%;
+			margin-bottom: 30px;
+		}
+		
+		.tab {
+			padding: 10px;
+			background-color: #444;
+			color: white;
+			border-radius: 5px 5px 0 0;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		
+		.tab:hover {
+			background-color: #666;
+			transform: translateY(-5px);
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+		}
+		
+		.tab.active {
+			background-color: #00ff00;
+			box-shadow: 0 2px 5px rgba(0, 255, 0, 0.3);
+		}
+		
+		h1 {
+			font-size: 50px;
+			color: white;
+			text-align: center;
+			margin-bottom: 50px;
+			text-shadow: 2px 2px #00ff00;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Portal Futurista</h1>
+		<div class="tabs">
+			<div class="tab active" onclick="location.href='pagina1.html'">Página 1</div>
+			<div class="tab" onclick="location.href='pagina2.html'">Página 2</div>
+			<div class="tab" onclick="location.href='pagina3.html'">Página 3</div>
+		</div>
+	</div>
+</body>
 </html>
-
 
 <!DOCTYPE html>
 <html>
