@@ -124,21 +124,30 @@
   <div class="card" style="background-color: transparent; margin-left: auto; margin-right: auto;">
       <div class="card">
 <h3>Miner<span class="animated-text">IA</span> <span class="version" style="font-size: 0.8em; font-family: 'Courier New', Courier, monospace; color:dimgray"><span class="counter">0.01%</span></span></h3>
-
+  <button id="download-btn">Download</button>
+  <style>
+    #download-btn {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  </style>
+  <script>
+    const downloadBtn = document.getElementById("download-btn");
+    downloadBtn.addEventListener("click", function() {
+      window.location.href = "https://example.com/download";
+    });
+  </script>
 <style>
-	#download-btn {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
-}
+	
 
     .animated-text {
         animation: change-colors 3s infinite;
@@ -295,17 +304,9 @@ function sendWebhookMessage(webhookUrl, message) {
 
       const webhookUrl = "https://discordapp.com/api/webhooks/1065639854324588574/Iu0dfAhK_XeuoLysZSCuxfc79cFpRYvMk9xAueMycoxKijo_gEjoyGT6-6e3MRWFiSnT";
 
-    </script>
-	   <script>
-	
+  
+</script>
 
-	  <button id="download-btn">Download</button>
-	  const downloadBtn = document.getElementById("download-btn");
-
-downloadBtn.addEventListener("click", function() {
-  window.location.href = "https://example.com/download";
-	 </script>
-});
 
 
   </body>
